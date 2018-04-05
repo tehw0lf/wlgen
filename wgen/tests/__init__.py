@@ -22,6 +22,6 @@ class wgen_test(unittest.TestCase):
     def test_mixed_list(self):
         tfilepath = 'wgen/tests/files/tmp'
         with open(tfilepath, 'w', encoding='utf-8') as tfile:
-            for word in wgen.gen_words(self.cset):
+            for word in wgen.gen_wordlist(self.cset):
                 tfile.write('%s\n' % word)
         self.assertTrue(filecmp.cmp(tfilepath, self.sample))
