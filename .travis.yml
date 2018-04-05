@@ -10,4 +10,4 @@ before_script:
 script:
   - coverage run -m unittest discover
 after_success:
-codecov
+  codecov
