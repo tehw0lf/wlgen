@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/tehw0lf/wgen.svg?branch=master)](https://travis-ci.org/tehw0lf/wgen) [![codecov](https://codecov.io/gh/tehw0lf/wgen/branch/master/graph/badge.svg)](https://codecov.io/gh/tehw0lf/wgen)
+[![Build Status](https://travis-ci.org/tehw0lf/wlgen.svg?branch=master)](https://travis-ci.org/tehw0lf/wlgen) [![codecov](https://codecov.io/gh/tehw0lf/wlgen/branch/master/graph/badge.svg)](https://codecov.io/gh/tehw0lf/wlgen)
 
 # Description
 A recursive wordlist generator written in Python.
@@ -11,15 +11,15 @@ Python 3.x (developed on Python 3.6.4)
 ## Installation
 To install from GitHub:
 ```
-git clone https://github.com/tehw0lf/wgen.git
-cd wgen
+git clone https://github.com/tehw0lf/wlgen.git
+cd wlgen
 python setup.py test (optional unit tests to ensure functionality)
 pip install .
 ```
 
 To install from PyPI:
 ```
-pip install wgen
+pip install wlgen
 ```
 
 ## Which function should I use?
