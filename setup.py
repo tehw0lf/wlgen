@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(name='wlgen',
-      version='1.0',
+      version='1.1',
       description='A recursive wordlist generator written in python',
       long_description='''A recursive wordlist generator written in Python.
 For each string position, custom character sets can be defined.
