@@ -23,5 +23,7 @@ pip install wlgen
 ```
 
 ## Which function should I use?
-Currently there are two implementations to generate a wordlist.
+Currently there are three implementations to generate a wordlist.
 `gen_wordlist` builds the whole list in memory before writing it, `gen_words` is a generator that is memory efficient but slower.
+`gen_wordlist_iter` uses `itertools.product` to generate the wordlist, which is recommended for lists that are too large to be built by `gen_wordlist`.
+Both algorithms calculate the n-ary cartesian product of the input character sets.
