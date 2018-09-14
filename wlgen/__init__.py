@@ -41,14 +41,14 @@ def gen_words(charset, positions=None, prev_iter=None):
     """
     if prev_iter is None:
         positions = [0 for i in charset]
-        iter = 0
+        cur_iter = 0
     else:
-        iter = prev_iter + 1
-    for idx, _ in enumerate(charset[iter]):
-        positions[iter] = idx
-        if iter == len(charset) - 1:
+        cur_iter = prev_iter + 1
+    for idx, _ in enumerate(charset[cur_iter]):
+        positions[cur_iter] = idx
+        if cur_iter == len(charset) - 1:
             yield "".join(
                 [charset[idx][val] for idx, val in enumerate(positions)]
             )
         else:
-            yield from gen_words(charset, positions, iter)
+            yield from gen_words(charset, positions, cur_iter)
