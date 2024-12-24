@@ -21,5 +21,8 @@ jobs:
       - name: Install the project
         run: uv sync --all-extras --dev
 
+      - name: Run ruff
+        run: uv run ruff check
+
       - name: Run tests
         run: uv run src/wlgen/tests/__init__.py
