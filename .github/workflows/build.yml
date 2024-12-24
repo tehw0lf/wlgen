@@ -10,6 +10,9 @@ jobs:
   build:
     name: python
     runs-on: ubuntu-latest
+    environment: pypi
+    permissions:
+      id-token: write
     steps:
       - uses: actions/checkout@v4
       - name: Install uv
@@ -29,22 +32,6 @@ jobs:
         run: uv run src/wlgen/tests/__init__.py
       - name: Build
         run: uv build
-      - name: Upload build artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          path: dist/wlgen-*
-
-  pypi-publish:
-    name: upload release to PyPI
-    if: ${{ github.event_name == 'push' }}
-    runs-on: ubuntu-latest
-    environment: pypi
-    permissions:
-      id-token: write
-    steps:
-      - name: Download build artifacts
-        uses: actions/download-artifact@v4
-        with:
-          path: dist/
       - name: Publish package distributions to PyPI
+        if: ${{ github.event_name == 'push' }}
         uses: pypa/gh-action-pypi-publish@release/v1
