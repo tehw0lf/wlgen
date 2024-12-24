@@ -29,3 +29,9 @@ jobs:
 
       - name: Run tests
         run: uv run src/wlgen/tests/__init__.py
+
+      - name: Build
+        run: uv build
+
+      - name: Publish
+        run: uv publish
