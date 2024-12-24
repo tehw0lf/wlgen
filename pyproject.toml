@@ -1,0 +1,20 @@
+[project]
+name="wlgen"
+version="1.2"
+description="A recursive wordlist generator written in python"
+readme = "README.md"
+authors = [
+    { name = "tehw0lf", email = "tehwolf@protonmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "ruff>=0.8.4",
+    "setuptools>=75.6.0",
+]
+
+[project.scripts]
+wlgen = "wlgen:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
