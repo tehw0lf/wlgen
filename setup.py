@@ -13,7 +13,6 @@ gen_words is a generator that is memory efficient but slower.
     url="https://github.com/tehw0lf/wlgen",
     author="tehw0lf",
     author_email="tehwolf@protonmail.com",
-    license="MIT",
-    packages=["wlgen"],
+    packages=["src/wlgen"],
     zip_safe=False,
 )
