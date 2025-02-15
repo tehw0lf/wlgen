@@ -5,7 +5,7 @@ For each string position, custom character sets can be defined.
 
 # Prerequisites
 
-Python 3.x (developed on Python 3.6.4)
+Python 3.x (developed on Python 3.7)
 
 # Instructions
 
