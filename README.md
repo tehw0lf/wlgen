@@ -1,6 +1,3 @@
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/0a096cae2cdf489690eb6e0b4aa80c86)](https://app.codacy.com/app/tehw0lf/wlgen?utm_source=github.com&utm_medium=referral&utm_content=tehw0lf/wlgen&utm_campaign=Badge_Grade_Dashboard)
-[![Build Status](https://travis-ci.com/tehw0lf/wlgen.svg?branch=master)](https://travis-ci.com/tehw0lf/wlgen) [![codecov](https://codecov.io/gh/tehw0lf/wlgen/branch/master/graph/badge.svg)](https://codecov.io/gh/tehw0lf/wlgen)
-
 # Description
 
 A recursive wordlist generator written in Python.
