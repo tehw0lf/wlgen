@@ -23,6 +23,5 @@ jobs:
       build_main: "build"
       event_name: ${{ github.event_name }}
       library_path: "dist/wlgen-*"
-      pypi: true
     secrets:
       UV_TOKEN: ${{ secrets.UV_TOKEN }}
