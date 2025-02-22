@@ -16,7 +16,7 @@ jobs:
       packages: write
     with:
       tool: "uv"
-      install: "sync --all-extras --lint"
+      install: "sync --all-extras --group lint"
       lint: "run ruff check"
       test: "run python -m unittest discover"
       build_branch: "build"
