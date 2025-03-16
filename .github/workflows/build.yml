@@ -22,6 +22,6 @@ jobs:
       build_branch: "build"
       build_main: "build"
       event_name: ${{ github.event_name }}
-      library_path: "dist/wlgen-*"
+      artifact_path: "dist"
     secrets:
       UV_TOKEN: ${{ secrets.UV_TOKEN }}
