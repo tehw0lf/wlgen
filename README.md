@@ -35,12 +35,49 @@ All implementations calculate the n-ary Cartesian product of input character set
 
 # Development
 
-Run tests:
+This project uses [uv](https://docs.astral.sh/uv/) for dependency management and development workflow.
+
+## Setup
+
+Install dependencies:
 ```bash
-python -m unittest discover
+uv sync --all-extras --group lint
 ```
 
-Run benchmarks:
+## Testing
+
+Run tests:
 ```bash
-python wlgen/benchmarks/benchmark.py
+uv run python -m unittest discover
+```
+
+## Benchmarking
+
+Run performance benchmarks:
+```bash
+uv run python wlgen/benchmarks/benchmark.py
+```
+
+## Code Quality
+
+Lint code:
+```bash
+uv run ruff check
+```
+
+Auto-fix linting issues:
+```bash
+uv run ruff check --fix
+```
+
+Format code:
+```bash
+uv run ruff format
+```
+
+## Building
+
+Build wheel and source distribution:
+```bash
+uv build
 ```
