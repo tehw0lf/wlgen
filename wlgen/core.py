@@ -23,11 +23,34 @@ def gen_wordlist(charset):
     return [i + j for i in current_pos for j in previous_pos]
 
 
-def gen_wordlist_iter(charset):
-    """Generates a wordlist using itertools.product"""
+def gen_wordlist_iter(charset, clean_input=False):
+    """Generates a wordlist using itertools.product
+
+    Args:
+        charset: Dictionary mapping position indices to character sets
+        clean_input: If True, skip sorting/deduplication (assumes input is
+                     already unique and sorted). Default False for backward
+                     compatibility.
+
+    Returns:
+        Iterator yielding generated words as strings
+
+    Example:
+        >>> charset = {0: '123', 1: 'ABC'}
+        >>> list(gen_wordlist_iter(charset))
+        ['1A', '1B', '1C', '2A', '2B', '2C', '3A', '3B', '3C']
+
+        >>> # When input is already clean, skip preprocessing
+        >>> list(gen_wordlist_iter(charset, clean_input=True))
+        ['1A', '1B', '1C', '2A', '2B', '2C', '3A', '3B', '3C']
+    """
     from itertools import product
 
-    charlst = [sorted(set(i)) for i in charset.values()]
+    if clean_input:
+        charlst = list(charset.values())
+    else:
+        charlst = [sorted(set(i)) for i in charset.values()]
+
     return map("".join, product(*charlst))
 
 
