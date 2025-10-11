@@ -288,8 +288,12 @@ def print_summary(results):
 
 def save_results(results, filename: str = "benchmark_results.txt"):
     """Save benchmark results to file"""
+    from datetime import datetime
+
     with open(filename, "w") as f:
         f.write("WLGEN BENCHMARK RESULTS\n")
+        f.write("=" * 80 + "\n")
+        f.write(f"Run date: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
         f.write("=" * 80 + "\n\n")
 
         for r in results:
@@ -302,13 +306,22 @@ def save_results(results, filename: str = "benchmark_results.txt"):
 
 
 if __name__ == "__main__":
+    from datetime import datetime
+
     print("WLGEN Performance Benchmark Suite")
     print("=" * 80)
 
     results = run_benchmarks(verbose=True)
     print_summary(results)
 
-    # Save results
-    output_file = "wlgen/benchmarks/baseline_results.txt"
+    # Save results with timestamp
+    timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
+    output_file = f"wlgen/benchmarks/results_{timestamp}.txt"
     save_results(results, output_file)
+
+    # Also save as latest
+    latest_file = "wlgen/benchmarks/latest_results.txt"
+    save_results(results, latest_file)
+
     print(f"\n📊 Results saved to: {output_file}")
+    print(f"📊 Latest results: {latest_file}")

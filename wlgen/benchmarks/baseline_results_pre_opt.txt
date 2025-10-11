@@ -1,0 +1,155 @@
+WLGEN BENCHMARK RESULTS
+================================================================================
+
+gen_wordlist [3 positions]:
+  Time: 0.0001s
+  Memory: 0.01 MB
+  Combinations: 125
+  Throughput: 1,128,026 comb/s
+  First result: 0.00ms
+
+gen_wordlist_iter [3 positions]:
+  Time: 0.0001s
+  Memory: 0.00 MB
+  Combinations: 125
+  Throughput: 1,305,797 comb/s
+  First result: 0.00ms
+
+gen_words [3 positions]:
+  Time: 0.0003s
+  Memory: 0.00 MB
+  Combinations: 125
+  Throughput: 397,560 comb/s
+  First result: 0.01ms
+
+gen_wordlist [4 positions]:
+  Time: 0.0015s
+  Memory: 0.14 MB
+  Combinations: 2,401
+  Throughput: 1,641,451 comb/s
+  First result: 0.00ms
+
+gen_wordlist_iter [4 positions]:
+  Time: 0.0028s
+  Memory: 0.00 MB
+  Combinations: 2,401
+  Throughput: 856,914 comb/s
+  First result: 0.00ms
+
+gen_words [4 positions]:
+  Time: 0.0077s
+  Memory: 0.00 MB
+  Combinations: 2,401
+  Throughput: 311,391 comb/s
+  First result: 0.01ms
+
+gen_wordlist [5 positions]:
+  Time: 0.0206s
+  Memory: 1.91 MB
+  Combinations: 32,768
+  Throughput: 1,588,204 comb/s
+  First result: 0.00ms
+
+gen_wordlist_iter [5 positions]:
+  Time: 0.0450s
+  Memory: 0.00 MB
+  Combinations: 32,768
+  Throughput: 728,051 comb/s
+  First result: 0.00ms
+
+gen_words [5 positions]:
+  Time: 0.1455s
+  Memory: 0.00 MB
+  Combinations: 32,768
+  Throughput: 225,165 comb/s
+  First result: 0.31ms
+
+gen_wordlist_iter [5 positions]:
+  Time: 0.1370s
+  Memory: 0.00 MB
+  Combinations: 100,000
+  Throughput: 729,968 comb/s
+  First result: 0.00ms
+
+gen_words [5 positions]:
+  Time: 0.3452s
+  Memory: 0.00 MB
+  Combinations: 100,000
+  Throughput: 289,659 comb/s
+  First result: 0.02ms
+
+gen_wordlist_iter [6 positions]:
+  Time: 4.1755s
+  Memory: 0.00 MB
+  Combinations: 2,985,984
+  Throughput: 715,128 comb/s
+  First result: 0.00ms
+
+gen_words [6 positions]:
+  Time: 11.0823s
+  Memory: 0.00 MB
+  Combinations: 2,985,984
+  Throughput: 269,437 comb/s
+  First result: 0.03ms
+
+gen_wordlist_iter [7 positions]:
+  Time: 14.3468s
+  Memory: 0.00 MB
+  Combinations: 10,000,000
+  Throughput: 697,020 comb/s
+  First result: 0.00ms
+
+gen_words [7 positions]:
+  Time: 38.4126s
+  Memory: 0.00 MB
+  Combinations: 10,000,000
+  Throughput: 260,331 comb/s
+  First result: 0.03ms
+
+gen_wordlist_iter [7 positions]:
+  Time: 1.3647s
+  Memory: 0.00 MB
+  Combinations: 1,000,000
+  Throughput: 732,763 comb/s
+  First result: 0.00ms
+
+gen_words [7 positions]:
+  Time: 3.9276s
+  Memory: 0.00 MB
+  Combinations: 1,000,000
+  Throughput: 254,607 comb/s
+  First result: 0.04ms
+
+gen_wordlist_iter [8 positions]:
+  Time: 1.4531s
+  Memory: 0.00 MB
+  Combinations: 1,000,000
+  Throughput: 688,196 comb/s
+  First result: 0.00ms
+
+gen_words [8 positions]:
+  Time: 3.8052s
+  Memory: 0.00 MB
+  Combinations: 1,000,000
+  Throughput: 262,801 comb/s
+  First result: 0.04ms
+
+gen_wordlist_iter [9 positions]:
+  Time: 1.4110s
+  Memory: 0.00 MB
+  Combinations: 1,000,000
+  Throughput: 708,695 comb/s
+  First result: 0.00ms
+
+gen_words [9 positions]:
+  Time: 4.1194s
+  Memory: 0.00 MB
+  Combinations: 1,000,000
+  Throughput: 242,752 comb/s
+  First result: 0.05ms
+
+
+================================================================================
+System Information:
+Python version: 3.13.1 (main, Dec 19 2024, 14:32:25) [Clang 18.1.8 ]
+Platform: linux
