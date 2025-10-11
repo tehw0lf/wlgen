@@ -1,152 +1,154 @@
 WLGEN BENCHMARK RESULTS
 ================================================================================
+Run date: 2025-10-11 22:45:11
+================================================================================
 
 gen_wordlist [3 positions]:
   Time: 0.0001s
   Memory: 0.01 MB
   Combinations: 125
-  Throughput: 1,173,643 comb/s
+  Throughput: 1,139,835 comb/s
   First result: 0.00ms
 
 gen_wordlist_iter [3 positions]:
   Time: 0.0001s
   Memory: 0.00 MB
   Combinations: 125
-  Throughput: 1,254,327 comb/s
+  Throughput: 1,273,224 comb/s
   First result: 0.00ms
 
 gen_words [3 positions]:
-  Time: 0.0008s
+  Time: 0.0002s
   Memory: 0.00 MB
   Combinations: 125
-  Throughput: 166,471 comb/s
-  First result: 0.20ms
+  Throughput: 754,353 comb/s
+  First result: 0.02ms
 
 gen_wordlist [4 positions]:
   Time: 0.0015s
   Memory: 0.14 MB
   Combinations: 2,401
-  Throughput: 1,630,647 comb/s
+  Throughput: 1,584,209 comb/s
   First result: 0.00ms
 
 gen_wordlist_iter [4 positions]:
   Time: 0.0028s
   Memory: 0.00 MB
   Combinations: 2,401
-  Throughput: 856,368 comb/s
+  Throughput: 855,242 comb/s
   First result: 0.00ms
 
 gen_words [4 positions]:
-  Time: 0.0103s
+  Time: 0.0037s
   Memory: 0.00 MB
   Combinations: 2,401
-  Throughput: 234,044 comb/s
+  Throughput: 643,192 comb/s
   First result: 0.02ms
 
 gen_wordlist [5 positions]:
-  Time: 0.0358s
+  Time: 0.0212s
   Memory: 1.91 MB
   Combinations: 32,768
-  Throughput: 916,171 comb/s
+  Throughput: 1,542,787 comb/s
   First result: 0.00ms
 
 gen_wordlist_iter [5 positions]:
-  Time: 0.0404s
+  Time: 0.0429s
   Memory: 0.00 MB
   Combinations: 32,768
-  Throughput: 811,442 comb/s
+  Throughput: 763,895 comb/s
   First result: 0.00ms
 
 gen_words [5 positions]:
-  Time: 0.1581s
+  Time: 0.0570s
   Memory: 0.00 MB
   Combinations: 32,768
-  Throughput: 207,208 comb/s
-  First result: 0.03ms
+  Throughput: 574,541 comb/s
+  First result: 0.02ms
 
 gen_wordlist_iter [5 positions]:
-  Time: 0.1272s
+  Time: 0.1369s
   Memory: 0.00 MB
   Combinations: 100,000
-  Throughput: 786,369 comb/s
+  Throughput: 730,519 comb/s
   First result: 0.00ms
 
 gen_words [5 positions]:
-  Time: 0.4334s
+  Time: 0.1637s
   Memory: 0.00 MB
   Combinations: 100,000
-  Throughput: 230,760 comb/s
-  First result: 0.03ms
+  Throughput: 610,977 comb/s
+  First result: 0.02ms
 
 gen_wordlist_iter [6 positions]:
-  Time: 3.8815s
+  Time: 4.2690s
   Memory: 0.00 MB
   Combinations: 2,985,984
-  Throughput: 769,278 comb/s
+  Throughput: 699,459 comb/s
   First result: 0.00ms
 
 gen_words [6 positions]:
-  Time: 13.7357s
+  Time: 5.1611s
   Memory: 0.00 MB
   Combinations: 2,985,984
-  Throughput: 217,389 comb/s
-  First result: 0.04ms
+  Throughput: 578,557 comb/s
+  First result: 0.03ms
 
 gen_wordlist_iter [7 positions]:
-  Time: 12.7454s
+  Time: 14.4057s
   Memory: 0.00 MB
   Combinations: 10,000,000
-  Throughput: 784,595 comb/s
+  Throughput: 694,169 comb/s
   First result: 0.00ms
 
 gen_words [7 positions]:
-  Time: 47.1301s
+  Time: 17.6728s
   Memory: 0.00 MB
   Combinations: 10,000,000
-  Throughput: 212,179 comb/s
-  First result: 0.05ms
+  Throughput: 565,843 comb/s
+  First result: 0.03ms
 
 gen_wordlist_iter [7 positions]:
-  Time: 1.2492s
+  Time: 1.4235s
   Memory: 0.00 MB
   Combinations: 1,000,000
-  Throughput: 800,540 comb/s
+  Throughput: 702,485 comb/s
   First result: 0.00ms
 
 gen_words [7 positions]:
-  Time: 4.4443s
+  Time: 1.6973s
   Memory: 0.00 MB
   Combinations: 1,000,000
-  Throughput: 225,006 comb/s
+  Throughput: 589,177 comb/s
   First result: 0.03ms
 
 gen_wordlist_iter [8 positions]:
-  Time: 1.3242s
+  Time: 1.4222s
   Memory: 0.00 MB
   Combinations: 1,000,000
-  Throughput: 755,193 comb/s
+  Throughput: 703,152 comb/s
   First result: 0.00ms
 
 gen_words [8 positions]:
-  Time: 4.7532s
+  Time: 1.7129s
   Memory: 0.00 MB
   Combinations: 1,000,000
-  Throughput: 210,383 comb/s
-  First result: 0.04ms
+  Throughput: 583,808 comb/s
+  First result: 0.03ms
 
 gen_wordlist_iter [9 positions]:
-  Time: 1.2903s
+  Time: 1.3989s
   Memory: 0.00 MB
   Combinations: 1,000,000
-  Throughput: 775,024 comb/s
+  Throughput: 714,837 comb/s
   First result: 0.00ms
 
 gen_words [9 positions]:
-  Time: 5.0401s
+  Time: 1.6855s
   Memory: 0.00 MB
   Combinations: 1,000,000
-  Throughput: 198,409 comb/s
-  First result: 0.05ms
+  Throughput: 593,281 comb/s
+  First result: 0.03ms
 
 
 ================================================================================
