@@ -202,6 +202,17 @@ def run_benchmarks(verbose: bool = True, include_xlarge: bool = False):
         ("gen_words", wlgen.gen_words, True, ["small", "medium", "large"]),
     ]
 
+    # Add NumPy implementation if available
+    if wlgen.HAS_NUMPY:
+        implementations.append(
+            ("gen_wordlist_numpy", wlgen.gen_wordlist_numpy, True, ["small", "medium", "large"])
+        )
+        if verbose:
+            print("✅ NumPy available - including gen_wordlist_numpy in benchmarks")
+    else:
+        if verbose:
+            print("⚠️  NumPy not available - skipping gen_wordlist_numpy benchmarks")
+
     all_results = []
 
     for test_name, charset, test_size in test_cases:

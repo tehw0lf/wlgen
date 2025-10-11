@@ -6,10 +6,17 @@ readme = "README.md"
 authors = [
     { name = "tehw0lf", email = "tehwolf@protonmail.com" }
 ]
-requires-python = ">=3.0"
+requires-python = ">=3.7"
+
+[project.optional-dependencies]
+numpy = ["numpy>=1.20.0"]
+
 [dependency-groups]
 lint = [
   "ruff"
+]
+numpy = [
+  "numpy>=1.20.0"
 ]
 [project.scripts]
 wlgen = "wlgen:main"
