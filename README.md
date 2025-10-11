@@ -5,30 +5,79 @@ For each string position, custom character sets can be defined.
 
 # Prerequisites
 
-Python 3.x (developed on Python 3.7)
+Python 3.0 or higher
 
-# Instructions
+# Installation
 
-## Installation
+From PyPI:
 
-To install from GitHub:
-
-```
-git clone https://github.com/tehw0lf/wlgen.git
-cd wlgen
-python setup.py test (optional unit tests to ensure functionality)
-pip install .
-```
-
-To install from PyPI:
-
-```
+```bash
 pip install wlgen
 ```
 
-## Which function should I use?
+From GitHub:
 
-Currently there are three implementations to generate a wordlist.
-`gen_wordlist` builds the whole list in memory before writing it, `gen_words` is a generator that is memory efficient but slower.
-`gen_wordlist_iter` uses `itertools.product` to generate the wordlist, which is recommended for lists that are too large to be built by `gen_wordlist`.
-Both algorithms calculate the n-ary cartesian product of the input character sets.
+```bash
+git clone https://github.com/tehw0lf/wlgen.git
+cd wlgen
+pip install .
+```
+
+# Usage
+
+Three implementations are available:
+
+- `gen_wordlist_iter`: Recommended for most use cases. Fast generator using `itertools.product`.
+- `gen_wordlist`: Builds entire list in memory. Fast but memory-intensive.
+- `gen_words`: Memory-efficient generator. Slower than `gen_wordlist_iter`.
+
+All implementations calculate the n-ary Cartesian product of input character sets.
+
+# Development
+
+This project uses [uv](https://docs.astral.sh/uv/) for dependency management and development workflow.
+
+## Setup
+
+Install dependencies:
+```bash
+uv sync --all-extras --group lint
+```
+
+## Testing
+
+Run tests:
+```bash
+uv run python -m unittest discover
+```
+
+## Benchmarking
+
+Run performance benchmarks:
+```bash
+uv run python wlgen/benchmarks/benchmark.py
+```
+
+## Code Quality
+
+Lint code:
+```bash
+uv run ruff check
+```
+
+Auto-fix linting issues:
+```bash
+uv run ruff check --fix
+```
+
+Format code:
+```bash
+uv run ruff format
+```
+
+## Building
+
+Build wheel and source distribution:
+```bash
+uv build
+```
