@@ -91,7 +91,7 @@ def benchmark_function(
         if is_generator:
             first_result_time = time.perf_counter()
             iterator = iter(output)
-            first_item = next(iterator)
+            _ = next(iterator)  # Consume first item to measure latency
             result.first_result_latency = (
                 time.perf_counter() - first_result_time
             )
