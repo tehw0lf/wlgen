@@ -54,7 +54,7 @@ def gen_wordlist_iter(charset, clean_input=False):
     return map("".join, product(*charlst))
 
 
-def gen_words(charset, positions=None, prev_iter=None):
+def gen_words(charset, positions=None, prev_iter=None, _charlst=None, _result=None):
     """Recursively generate wordlist word for word
 
     Recursively generates a wordlist word for word, based on a given
@@ -65,15 +65,23 @@ def gen_words(charset, positions=None, prev_iter=None):
     Example: {0: '123', 1: 'ABC', 2: '!"§ '}
     """
     if prev_iter is None:
-        positions = [0 for i in charset]
+        # Initialize on first call - cache charset values and result buffer
+        _charlst = list(charset.values())
+        positions = [0 for _ in _charlst]
+        _result = [''] * len(_charlst)
         cur_iter = 0
     else:
         cur_iter = prev_iter + 1
-    for idx, _ in enumerate(charset[cur_iter]):
+
+    # Cache charset at current position to avoid repeated lookups
+    current_charset = _charlst[cur_iter]
+
+    for idx, char in enumerate(current_charset):
         positions[cur_iter] = idx
-        if cur_iter == len(charset) - 1:
-            yield "".join(
-                [charset[idx][val] for idx, val in enumerate(positions)]
-            )
+        _result[cur_iter] = char  # Build result incrementally
+
+        if cur_iter == len(_charlst) - 1:
+            # Yield the built string from result buffer
+            yield "".join(_result)
         else:
-            yield from gen_words(charset, positions, cur_iter)
+            yield from gen_words(charset, positions, cur_iter, _charlst, _result)
