@@ -12,16 +12,15 @@ def gen_wordlist(charset):
     The input charset is assumed to be unique and sorted.
     Example: {0: '123', 1: 'ABC', 2: '!"§ '}
     """
-    subset = {}
     if len(charset) == 1:
-        return charset[0]
-    else:
-        current_pos = charset[0]
-        for str_pos in range(1, len(charset)):
-            subset[str_pos - 1] = charset[str_pos]
-        previous_pos = gen_wordlist(subset)
-        wlist = [(i + j) for i in current_pos for j in previous_pos]
-        return wlist
+        return list(charset[0])
+
+    current_pos = charset[0]
+    # Use dict comprehension to rebuild subset - avoids loop overhead
+    subset = {i - 1: charset[i] for i in range(1, len(charset))}
+    previous_pos = gen_wordlist(subset)
+    # Direct string concatenation is fastest for 2-char combinations
+    return [i + j for i in current_pos for j in previous_pos]
 
 
 def gen_wordlist_iter(charset):
