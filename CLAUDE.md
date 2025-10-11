@@ -12,23 +12,30 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 The library provides three distinct implementations with different performance characteristics:
 
-1. **`gen_wordlist(charset)`** (wlgen/__init__.py:1)
+1. **`gen_wordlist(charset)`** (wlgen/core.py:4)
    - Builds the entire wordlist in memory using recursive list comprehensions
    - Fast but memory-intensive
    - Best for small to medium wordlists that fit in memory
    - Returns a complete list of all generated words
 
-2. **`gen_wordlist_iter(charset)`** (wlgen/__init__.py:24)
+2. **`gen_wordlist_iter(charset)`** (wlgen/core.py:25)
    - Uses `itertools.product` for lazy evaluation
    - Memory-efficient generator-based approach
    - Recommended for large wordlists that exceed memory constraints
    - Returns an iterator mapping over product tuples
 
-3. **`gen_words(charset, positions=None, prev_iter=None)`** (wlgen/__init__.py:32)
+3. **`gen_words(charset, positions=None, prev_iter=None)`** (wlgen/core.py:33)
    - Pure recursive generator implementation
    - Memory-efficient but slower than `gen_wordlist_iter`
    - Yields words one at a time without building intermediate structures
    - Uses position tracking for recursive state management
+
+### Package Structure
+
+- **wlgen/__init__.py**: Public API exports
+- **wlgen/core.py**: Core wordlist generation implementations
+- **wlgen/benchmarks/**: Performance benchmarking suite
+- **wlgen/tests/**: Unit tests
 
 ### Input Format
 

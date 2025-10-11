@@ -2,7 +2,7 @@
 
 ## Current Implementation Analysis
 
-### 1. `gen_wordlist` (wlgen/__init__.py:1)
+### 1. `gen_wordlist` (wlgen/core.py:4)
 
 **Issues Identified:**
 - **Unnecessary dictionary rebuilding** (lines 17-18): Creates new subset dictionary on each recursive call
@@ -12,7 +12,7 @@
 
 **Performance Impact:** Medium - Recursive overhead and dict rebuilding slow it down
 
-### 2. `gen_wordlist_iter` (wlgen/__init__.py:24)
+### 2. `gen_wordlist_iter` (wlgen/core.py:25)
 
 **Current State:** Already near-optimal
 
@@ -22,7 +22,7 @@
 
 **Performance Impact:** Low - itertools.product is C-optimized
 
-### 3. `gen_words` (wlgen/__init__.py:32)
+### 3. `gen_words` (wlgen/core.py:33)
 
 **Issues Identified:**
 - **Repeated list comprehension** (line 50-52): Rebuilds string from positions on every yield
