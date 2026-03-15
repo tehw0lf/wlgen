@@ -26,3 +26,5 @@ jobs:
       build_main: "build"
       artifact_path: "dist"
       publish_github_release: "true"
+    secrets:
+      GH_PAT: ${{ secrets.GH_PAT }}
