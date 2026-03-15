@@ -1,14 +1,16 @@
 name: publish to pypi
 
 on:
-  push:
-    tags:
-      - "v*"
+  workflow_run:
+    workflows: ["build pipeline"]
+    types: [completed]
+    branches: [main]
 
 jobs:
   publish_to_pypi:
     name: publish to pypi
     runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     timeout-minutes: 15
     permissions:
       actions: read
