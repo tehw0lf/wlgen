@@ -19,26 +19,13 @@ jobs:
     steps:
       - uses: actions/checkout@v6
 
-      - name: check build artifact existence
-        uses: softwareforgood/check-artifact-v4-existence@v0
-        id: check_artifact_exists
-        with:
-          name: build
-
-      - name: validate artifact availability
-        if: ${{ steps.check_artifact_exists.outputs.exists != 'true' }}
-        run: |
-          echo "::error::[PyPI] Build artifact 'build' not found"
-          echo "::error::[PyPI] Expected artifact at: dist"
-          echo "::error::[PyPI] This usually means the build step failed or didn't produce artifacts"
-          exit 1
-
       - name: download build artifact
-        if: ${{ steps.check_artifact_exists.outputs.exists == 'true' }}
         uses: actions/download-artifact@v8
         with:
           name: build
           path: dist
+          run-id: ${{ github.event.workflow_run.id }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
 
       - uses: astral-sh/setup-uv@v7
         if: ${{ success() }}
