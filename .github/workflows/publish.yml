@@ -18,6 +18,11 @@ jobs:
       id-token: write
     steps:
       - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          # This job only downloads an artifact and publishes to PyPI via
+          # OIDC; it runs no authenticated git command, so the default
+          # persisted token would sit in the runner unused.
+          persist-credentials: false
 
       - name: download build artifact
         uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8
